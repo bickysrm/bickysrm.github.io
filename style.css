@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,600&family=Poppins:wght@300;400;500;600;900&family=Source+Code+Pro:wght@600&family=Source+Sans+3:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+    background: #2b3dda;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(235, 202, 245);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #420177;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: #e6eff1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loader-container.fade-out {
+    top: -120%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 10%;
+    height: 6.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem 9%;
+}
+
+.heading {
+    font-size: 3.5rem;
+    color: rgb(32, 32, 32);
+    font-weight: 800;
+    text-align: center;
+}
+
+.heading span {
+    color: rgb(115, 3, 167);
+}
+
+header .logo {
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #0e2431;
+}
+
+header .logo i {
+    font-size: 2.2rem;
+}
+
+header .logo:hover {
+    color: #fc8c05;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar li {
+    margin-left: 2.5rem;
+}
+
+header .navbar ul li a {
+    font-size: 2rem;
+    color: #0e2431;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+    transition: 0.2s;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+    color: #011aff;
+    border-bottom: 0.2rem solid #011aff;
+    padding: 0.5rem 0;
+}
+
+#menu {
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgb(24, 2, 63);
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: 6.5rem;
+        right: -120%;
+        width: 75%;
+        height: 100%;
+        text-align: left;
+        align-items: flex-start;
+        background-color: #0e0f31;
+    }
+
+    header .navbar ul {
+        flex-flow: column;
+        padding: 1rem;
+    }
+
+    header .navbar ul li {
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        width: 26rem;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        padding: 1rem;
+        text-align: left;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover {
+        padding: 1rem;
+        color: #fff;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #011aff;
+    }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle {
+        right: 0;
+    }
+}
+
+.container {
+    height: 80vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.container h2 {
+    padding-top: 30vh;
+    font-size: 5rem;
+    color: #0a3c58;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container h2 span {
+    color: #ff7b00;
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container .text {
+    position: relative;
+    color: #fa3015;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.container .first_text {
+    color: #FFF;
+}
+
+.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-left: 2px solid #fa3015;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.btn {
+    height: 50px;
+    width: 150px;
+    background-color: #011aff;
+    margin: 20px 0 0 0;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn a {
+    color: #fff;
+    padding-top: 2px;
+    font-size: 2rem;
+}
+.btn a i{
+    margin-top: 2px;
+    margin-left: 4px;
+    font-size: 16px;
+}
+
+.img-section {
+    margin: -367px 0 0 850px;
+    filter: drop-shadow(5px 5px 7px #000);
+}
+
+.img-section img {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.img-section img:hover {
+    transform: scale3d(20px);
+}
+
+.socials {
+    position: relative;
+    height: 80px;
+    width: 500px;
+    /* background-color: green; */
+    margin-top: 70px;
+    display: flex;
+}
+
+.socials .social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.socials .social-icons li {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 5rem;
+    margin-right: 4px;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 44px;
+    color: #00d9ff;
+    background-color: #09011b;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #0685da;
+}
+
+.social-icons a.github:hover {
+    background-color: #0e0e0e;
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6;
+}
+
+.social-icons a.instagram:hover {
+    background-color: #ee00da;
+}
+
+.social-icons a.youtube:hover {
+    background-color: rgb(248, 13, 13);
+}
+
+/* about start */
+.about-container {
+    background-color: red;
+    height: 80vh;
+    width: 100%;
+}
+
+/* .about {
+    background: rgb(255, 255, 255);
+  } */
+.about .row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+.about .row .image {
+    text-align: center;
+    flex: 1 1 35rem;
+}
+
+.about .row .image img {
+    margin: 4rem;
+    width: 30rem;
+    height: 40rem;
+    border-radius: 5%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    mix-blend-mode: luminosity;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.about .row .image img:hover {
+    mix-blend-mode: normal;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 3rem;
+}
+
+.about .row .content h3 {
+    color: rgb(27, 27, 27);
+    font-size: 2.5rem;
+}
+
+.about .row .content .tag {
+    font-size: 1.4rem;
+    color: #020133;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.about .row .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-family: "Nunito";
+    font-weight: 600;
+}
+
+.about .row .content .box-container .box p {
+    text-transform: none;
+}
+
+.about .row .content .box-container .box p span {
+    color: #011aff;
+}
+.resume{
+    height: 3rem;
+    width: 20rem;
+    font-size: 2rem;
+    align-items: center;
+}
+.resume a{
+    color: #FFF;
+}
+.resume a i{
+    margin-top: 5px;
+    margin-left: 2px 
+} 
+
+/* whtasapp button start */
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+/* whatsapp button end */
