@@ -442,7 +442,7 @@ header .navbar ul li a:hover {
 } 
 
 /* whtasapp button start */
-.float {
+/* .float {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -459,6 +459,6 @@ header .navbar ul li a:hover {
 
 .my-float {
     margin-top: 16px;
-}
+} */
 
 /* whatsapp button end */
