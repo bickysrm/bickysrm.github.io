@@ -274,7 +274,7 @@ header .navbar ul li a:hover {
 }
 
 .img-section {
-    margin: -367px 0 0 850px;
+    margin: -293px 0 0 850px;
     filter: drop-shadow(5px 5px 7px #000);
 }
 
@@ -291,8 +291,6 @@ header .navbar ul li a:hover {
     position: relative;
     height: 80px;
     width: 500px;
-    /* background-color: green; */
-    margin-top: 70px;
     display: flex;
 }
 
