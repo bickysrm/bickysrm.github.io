@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    background: #fff;
+    background: #f7f7f7;
     font-family: "Poppins", sans-serif;
 }
 
@@ -79,7 +79,7 @@ header {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 2rem 9%;
 }
 
 .heading {
@@ -293,7 +293,10 @@ span{
     box-shadow: 0 0 1rem #00d9ff;
 
 }
-
+.about{
+    background: #fff;
+    min-height: 80vh;
+}
 .about .row {
     display: flex;
     flex-direction: column;
@@ -439,7 +442,7 @@ span{
     margin-bottom: 0.5rem;
     color: #FFF;
     align-items: center;
-    text-wrap: wrap;
+    text-wrap: nowrap;
     flex-direction: column;
     font-family: 'Source Sans 3', sans-serif;
 }
@@ -474,6 +477,10 @@ span{
         width: 100%;
     }
 }
+.education {
+    background: #e5ecfb;
+    min-height: 80vh;
+  }
 
 .education p {
     text-align: center;
@@ -486,7 +493,6 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFF;
 }
 
 .timeline {
@@ -498,7 +504,7 @@ span{
 
 }
 #particles-js{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     position: absolute;
 }
@@ -606,8 +612,17 @@ span{
         background-color: #6005aa;
     }
 }
+.work {
+    background: linear-gradient(to bottom, #000031, #00002c);
+  }
+.work h2{
+    color: #fff;
+    padding: 1rem;
+}
+.work .heading span {
+    color: rgb(255, 230, 0);
+  }
 .box1{
-    /* background-color: red; */
     width: 100%;
     height: 80vh;
     display: flex;
@@ -694,3 +709,19 @@ span{
 .btn2:hover{
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
+.contactus {
+    background: #e5ecfb;
+    min-height: 60vh;
+  }
+.contact-container{
+    height: 80vh;
+    width: 100%;
+    background: red;
+    border-radius: 15px;
+}
+.inner-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
