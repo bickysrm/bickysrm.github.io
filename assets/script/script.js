@@ -1,17 +1,18 @@
-const text = document.querySelector(".sec-text");
+let sections =  document.querySelectorAll('section');
+let navlinks =  document.querySelectorAll('header nav a');
 
-const Load = () => {
-    setTimeout(() => {
-        text.textContent = "Web Developer";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = "Youtuber";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = "Freelancer";
-    }, 8000); //1s = 1000 milliseconds
-}
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset =sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
-Load();
-setInterval(Load, 12000);
-
+        if(top >= offset && top < offset + height ){
+            navlinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[herf*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
