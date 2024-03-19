@@ -749,9 +749,12 @@ span{
 .form-group .btn{
     width: 30vw;
     margin-top: 15px;
+    font-size: 2rem;
+    color: #fff;
     border-radius: 10px;
 }
 
 .form-group .btn:hover{
-    background: #011affab;
+    color: #011aff;
+    background: #fff;
 }
